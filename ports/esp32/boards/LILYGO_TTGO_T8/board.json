@@ -1,0 +1,21 @@
+{
+    "deploy": [
+        "../deploy.md"
+    ],
+    "docs": "",
+    "features": [
+        "BLE",
+        "External Flash",
+	"SDCard",
+        "USB",
+        "WiFi"
+    ],
+    "images": [
+        "https://github.com/LilyGO/TTGO-T8-ESP32/blob/master/image/T8%201.3.jpg"
+    ],
+    "mcu": "esp32",
+    "product": "LILYGO TTGO T8",
+    "thumbnail": "",
+    "url": "https://github.com/LilyGO/TTGO-T8-ESP32",
+    "vendor": "LILYGO"
+}
