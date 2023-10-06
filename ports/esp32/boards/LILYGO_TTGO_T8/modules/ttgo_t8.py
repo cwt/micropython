@@ -55,6 +55,7 @@ class TTGO_T8:
             raise e
         else:
             self.__sd.spi.deinit()
+            self.__sd = None
 
         if self.__sd_lib:
             sys.path.pop(sys.path.index(f'{mountpoint}/lib'))
