@@ -1,0 +1,20 @@
+{
+    "deploy": [
+        "../deploy.md"
+    ],
+    "docs": "",
+    "features": [
+        "BLE",
+        "External Flash",
+        "USB",
+        "WiFi"
+    ],
+    "images": [
+        "https://camo.githubusercontent.com/cc5cd75d217da8e07744a983f52302dc7c72ac44cda76fbe8376c97d8074b351/687474703a2f2f7777772e736d61727461726475696e6f2e636f6d2f757066696c65732f636172642f32303136313133302f31343830343839393037363837332e6a7067"
+    ],
+    "mcu": "esp32",
+    "product": "DOIT ESP32 DevKit V1",
+    "thumbnail": "",
+    "url": "https://github.com/SmartArduino/SZDOITWiKi/wiki/ESP8266---ESP32",
+    "vendor": "DOIT"
+}
