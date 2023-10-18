@@ -19,7 +19,7 @@ class TTGO_T8:
         self.__sd = None
         self.__sd_lib = False
 
-    def sdcard(self, baudrate=20_000_000):
+    def sdcard(self, baudrate=26_666_667):
         cs = machine.Pin(self.SD_CS, machine.Pin.OUT)
         spi = machine.SPI(
             1,
