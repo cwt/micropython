@@ -1,0 +1,19 @@
+{
+    "deploy": [
+        "../deploy_c3.md"
+    ],
+    "docs": "",
+    "features": [
+        "BLE",
+        "External Flash",
+        "WiFi"
+    ],
+    "images": [
+        ""
+    ],
+    "mcu": "esp32c3",
+    "product": "ESP-C3-12F-Kit",
+    "thumbnail": "",
+    "url": "https://web.archive.org/web/20230530233843/https://docs.ai-thinker.com/_media/esp32/docs/esp-c3-12f-kit-v1.0_specification.pdf",
+    "vendor": "Ai-Thinker"
+}
