@@ -5,7 +5,7 @@
     "docs": "",
     "features": [
         "BLE",
-        "External Flash",
+        "Embedded Flash",
         "WiFi"
     ],
     "images": [
