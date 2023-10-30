@@ -195,17 +195,13 @@ SRC_C += \
 	hal/pwm_backport.c \
 	help.c \
 	led.c \
-	machine_adc.c \
 	machine_bitstream.c \
 	machine_i2c.c \
-	machine_i2s.c \
 	machine_led.c \
 	machine_pin.c \
 	machine_rtc.c \
 	machine_sdcard.c \
 	machine_spi.c \
-	machine_uart.c \
-	machine_wdt.c \
 	main.c \
 	mbedtls/mbedtls_port.c \
 	mimxrt_flash.c \

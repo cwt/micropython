@@ -27,12 +27,7 @@
 
 #include "py/runtime.h"
 #include "drivers/dht/dht.h"
-#include "extmod/machine_bitstream.h"
-#include "extmod/machine_mem.h"
-#include "extmod/machine_i2c.h"
-#include "extmod/machine_pulse.h"
-#include "extmod/machine_signal.h"
-#include "extmod/machine_spi.h"
+#include "extmod/modmachine.h"
 #include "shared/runtime/pyexec.h"
 #include "led.h"
 #include "pin.h"
@@ -188,7 +183,9 @@ STATIC const mp_rom_map_elem_t machine_module_globals_table[] = {
     { MP_ROM_QSTR(MP_QSTR_LED),                 MP_ROM_PTR(&machine_led_type) },
     #endif
     { MP_ROM_QSTR(MP_QSTR_Pin),                 MP_ROM_PTR(&machine_pin_type) },
+    #if MICROPY_PY_MACHINE_ADC
     { MP_ROM_QSTR(MP_QSTR_ADC),                 MP_ROM_PTR(&machine_adc_type) },
+    #endif
     { MP_ROM_QSTR(MP_QSTR_Timer),               MP_ROM_PTR(&machine_timer_type) },
     { MP_ROM_QSTR(MP_QSTR_RTC),                 MP_ROM_PTR(&machine_rtc_type) },
     #if MICROPY_PY_MACHINE_SDCARD
@@ -203,8 +200,12 @@ STATIC const mp_rom_map_elem_t machine_module_globals_table[] = {
     { MP_ROM_QSTR(MP_QSTR_I2S),                 MP_ROM_PTR(&machine_i2s_type) },
     #endif
     { MP_ROM_QSTR(MP_QSTR_SPI),                 MP_ROM_PTR(&machine_spi_type) },
+    #if MICROPY_PY_MACHINE_UART
     { MP_ROM_QSTR(MP_QSTR_UART),                MP_ROM_PTR(&machine_uart_type) },
+    #endif
+    #if MICROPY_PY_MACHINE_WDT
     { MP_ROM_QSTR(MP_QSTR_WDT),                 MP_ROM_PTR(&machine_wdt_type) },
+    #endif
 
     { MP_ROM_QSTR(MP_QSTR_idle),                MP_ROM_PTR(&machine_idle_obj) },
     { MP_ROM_QSTR(MP_QSTR_deepsleep),           MP_ROM_PTR(&machine_deepsleep_obj) },
