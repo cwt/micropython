@@ -3,8 +3,7 @@
  *
  * The MIT License (MIT)
  *
- * Copyright (c) 2013, 2014 Damien P. George
- * Copyright (c) 2015 Daniel Campora
+ * Copyright (c) 2023 Damien P. George
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,24 +23,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-#ifndef MICROPY_INCLUDED_CC3200_MODS_MODOS_H
-#define MICROPY_INCLUDED_CC3200_MODS_MODOS_H
+#ifndef MICROPY_INCLUDED_RP2_MUTEX_EXTRA_H
+#define MICROPY_INCLUDED_RP2_MUTEX_EXTRA_H
 
-#include "py/obj.h"
+#include "pico/mutex.h"
 
-/******************************************************************************
- DEFINE PUBLIC TYPES
- ******************************************************************************/
+uint32_t mutex_enter_blocking_and_disable_interrupts(mutex_t *mtx);
+void mutex_exit_and_restore_interrupts(mutex_t *mtx, uint32_t save);
 
-typedef struct _os_term_dup_obj_t {
-    mp_obj_t stream_o;
-    mp_obj_t read[3];
-    mp_obj_t write[3];
-} os_term_dup_obj_t;
-
-/******************************************************************************
- DECLARE PUBLIC FUNCTIONS
- ******************************************************************************/
-void osmount_unmount_all (void);
-
-#endif // MICROPY_INCLUDED_CC3200_MODS_MODOS_H
+#endif // MICROPY_INCLUDED_RP2_MUTEX_EXTRA_H
